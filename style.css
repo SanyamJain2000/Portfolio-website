@@ -33,29 +33,61 @@
     margin: 0;
   }
   
+  /* Redesigned Resume Button */
   .resume-btn {
     position: fixed;
     right: 2rem;
     top: 2rem;
-    background: var(--accent-pink);
+    background: linear-gradient(45deg, var(--accent-pink), #a876ff);
     color: var(--dark-purple);
     padding: 1rem 2rem;
     border: none;
     border-radius: 30px;
     font-weight: 600;
     font-size: 1.1rem;
-    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 1000;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .resume-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .resume-btn:active {
+    transform: scale(0.98);
+  }
+  
+  /* Pulse Animation (applied to all buttons on hover) */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 128, 171, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(255, 128, 171, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 128, 171, 0);
+    }
+  }
+  
+  /* Apply pulse animation on hover to every button */
+  .resume-btn:hover,
+  .project-btn:hover {
+    animation: pulse 1.5s infinite;
   }
   
   /* Profile Section */
   .profile-section {
     display: flex;
-    align-items: center;
-    padding: 3rem 5%;
+    align-items: center; /* align items at the top */
     gap: 2rem;
-    margin-left: 5%;
+    padding: 3rem 5%;
+    margin-left: 1%;
+    flex-wrap: nowrap; /* prevent wrapping if space allows */
   }
   
   .profile-container {
@@ -67,17 +99,40 @@
   .name {
     font-size: 2.5rem;
     color: var(--dark-purple);
-    margin-left: 2rem;
     white-space: nowrap;
   }
   
+  .about-box {
+    position: relative;
+    width: 700px; /* or your desired width */
+    left: 7rem;
+    background: #ffffff;
+    padding: 1rem;
+    border: 1px solid var(--primary-purple);
+    border-radius: 10px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--dark-purple);
+  }
+  
+  /* Profile Pic with Glow Effect */
   .profile-pic {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     border: 4px solid var(--accent-pink);
-    animation: float 3s ease-in-out infinite;
     object-fit: cover;
+    animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 5px var(--accent-pink), 0 0 10px var(--accent-pink);
+    }
+    to {
+      box-shadow: 0 0 20px var(--accent-pink), 0 0 30px var(--accent-pink);
+    }
   }
   
   .dialogue-box {
@@ -119,17 +174,45 @@
     margin: 0 auto;
   }
   
-  .project-card {
+  /* Updated Project Card with 3D Book Page Shadow */
+  /* Updated Project Card (Book Page Look without Tilt) */
+.project-card {
+    position: relative; /* Needed for pseudo-elements */
     background: white;
     border-radius: 15px;
     padding: 1.5rem;
-    transition: transform 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    /* Multi-directional shadow for depth on all sides */
+    box-shadow: 
+      0 10px 20px rgba(0, 0, 0, 0.2),   /* bottom shadow */
+      0 -5px 10px rgba(0, 0, 0, 0.1),   /* top shadow */
+      10px 0 20px rgba(0, 0, 0, 0.15),   /* right shadow */
+      -10px 0 20px rgba(0, 0, 0, 0.15);  /* left shadow */
   }
   
   .project-card:hover {
+    /* On hover, slightly lift the card without any rotation */
     transform: translateY(-5px);
+    box-shadow: 
+      0 12px 24px rgba(0, 0, 0, 0.25),
+      0 -5px 10px rgba(0, 0, 0, 0.1),
+      12px 0 24px rgba(0, 0, 0, 0.2),
+      -12px 0 24px rgba(0, 0, 0, 0.2);
   }
+  
+  /* Optional: A subtle page-curl accent at the bottom-right */
+  .project-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), transparent);
+    border-bottom-right-radius: 15px;
+    pointer-events: none;
+  }
+  
   
   .project-card h3 {
     margin-bottom: 1rem;
@@ -180,7 +263,7 @@
   }
   
   .view-more-btn {
-    background: #673ab7; /* a lighter purple than var(--dark-purple) */
+    background: #673ab7;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -191,7 +274,7 @@
   }
   
   .open-project-btn {
-    background: #d1c4e9; /* very light purple */
+    background: #d1c4e9;
     color: var(--dark-purple);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -260,24 +343,13 @@
   
   /* Animations */
   @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
   }
   
   @keyframes typewriter {
-    from {
-      width: 0;
-      opacity: 0;
-    }
-    to {
-      width: 350px;
-      opacity: 1;
-    }
+    from { width: 0; opacity: 0; }
+    to { width: 300px; opacity: 1; }
   }
   
   /* Responsive Design */
@@ -285,27 +357,27 @@
     .projects-grid {
       grid-template-columns: 1fr;
     }
-  
+    
     .profile-section {
       flex-direction: column;
       text-align: center;
     }
-  
+    
     .dialogue-box {
       width: 90%;
       margin: 1rem auto;
     }
-  
+    
     .dialogue-box::after {
       display: none;
     }
-  
+    
     .resume-btn {
       right: 1rem;
       top: 1rem;
       padding: 0.8rem 1.5rem;
     }
-  
+    
     .modal-grid {
       grid-template-columns: 1fr;
     }

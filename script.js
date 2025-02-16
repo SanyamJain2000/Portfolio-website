@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Typewriter Effect
-    const text = "HCI Researcher & Full Stack Developer";
+    const text = "HCI Researcher & UI/UX Designer";
     let index = 0;
     const typewriterElement = document.getElementById('typewriter');
   
@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
           "SQL",
           "HCI Principles",
           "JavaScript",
-          "Research"
+          "Research",
+          "Wireframing"
         ],
         projectUrl: "https://sanyamj-154.github.io/ENVISION/",
         sections: [
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Modern UI/UX crafted with Figma, HTML, CSS, and Bootstrap for effortless healthcare navigation",
             "Tailored for patients and clinics alike, ensuring swift communication, timely scheduling, and improved user engagement"
           ],
-        tech: ["Figma", "HTML", "CSS", "Bootstrap", "User Cognition", "HCI", "JavaScript", "Pen/Pencil"],
+        tech: ["Figma", "HTML", "CSS", "Bootstrap", "Wireframing", "User Cognition", "HCI", "JavaScript", "Pen/Pencil"],
         projectUrl: "https://sanyamj-154.github.io/healthcare-appointment/",
         sections: [
           {
@@ -172,7 +173,8 @@ document.addEventListener('DOMContentLoaded', () => {
           "Media Queries",
           "Advanced JavaScript (ES6+)",
           "Node.js",
-          "Git Version Control"
+          "Git Version Control",
+          "Prototyping"
         ],
         projectUrl: "https://sanyamj-154.github.io/public-news/",
         sections: [
