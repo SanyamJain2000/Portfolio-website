@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
           "Research",
           "Wireframing"
         ],
-        projectUrl: "https://sanyamj-154.github.io/ENVISION/",
+        projectUrl: "https://sanyamjain2000.github.io/ENVISION/",
         sections: [
           {
             title: "Interactive Landing Page",
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Tailored for patients and clinics alike, ensuring swift communication, timely scheduling, and improved user engagement"
           ],
         tech: ["Figma", "HTML", "CSS", "Bootstrap", "Wireframing", "User Cognition", "HCI", "JavaScript", "Pen/Pencil"],
-        projectUrl: "https://sanyamj-154.github.io/healthcare-appointment/",
+        projectUrl: "https://sanyamjain2000.github.io/healthcare-appointment/",
         sections: [
           {
             title: "User-Centric Landing Concepts",
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
           "Git Version Control",
           "Prototyping"
         ],
-        projectUrl: "https://sanyamj-154.github.io/public-news/",
+        projectUrl: "https://sanyamjain2000.github.io/public-news/",
         sections: [
           {
             title: "Full-Width Web Layout",
@@ -563,7 +563,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Resume Button Handler
     document.querySelector('.resume-btn').addEventListener('click', () => {
-      window.open('https://sanyamj-154.github.io/Portfolio-2025/', '_blank');
+      window.open('https://sanyamjain2000.github.io/Portfolio-2025/', '_blank');
     });
   });
   
