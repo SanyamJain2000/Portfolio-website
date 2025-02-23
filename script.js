@@ -34,6 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
           "HCI Principles",
           "JavaScript",
           "Research",
+          "PowerApps",
+          "Power Automate",
+          "Other Microsoft 365 Tools",
+          "PowerBI",
           "Wireframing"
         ],
         projectUrl: "https://sanyamjain2000.github.io/ENVISION/",
@@ -94,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Modern UI/UX crafted with Figma, HTML, CSS, and Bootstrap for effortless healthcare navigation",
             "Tailored for patients and clinics alike, ensuring swift communication, timely scheduling, and improved user engagement"
           ],
-        tech: ["Figma", "HTML", "CSS", "Bootstrap", "Wireframing", "User Cognition", "HCI", "JavaScript", "Pen/Pencil"],
+        tech: ["Figma", "HTML", "CSS", "Bootstrap", "Wireframing", "User Cognition", "HCI", "JavaScript", "Pen/Pencil", "SharePoint", "Power Apps Dev"],
         projectUrl: "https://sanyamjain2000.github.io/healthcare-appointment/",
         sections: [
           {
@@ -174,7 +178,9 @@ document.addEventListener('DOMContentLoaded', () => {
           "Advanced JavaScript (ES6+)",
           "Node.js",
           "Git Version Control",
-          "Prototyping"
+          "Prototyping",
+          "Microsoft 365 Tools",
+          "API"
         ],
         projectUrl: "https://sanyamjain2000.github.io/public-news/",
         sections: [
@@ -219,7 +225,10 @@ document.addEventListener('DOMContentLoaded', () => {
           "User-Centered Research",
           "API Integrations",
           "Firebase",
-          "RESTful Architecture"
+          "RESTful Architecture",
+          "Microsoft Power Apps",
+          "Share Point",
+          "Teams"
         ],
         sections: (function () {
           const sections = [];
